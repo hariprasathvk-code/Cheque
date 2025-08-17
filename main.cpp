@@ -64,7 +64,7 @@ void process() {
 }
 // Termination Function
 void termination() {
-    
+    cout << "End Transaction.\n";
 }
 // Main Function
 int main() {
