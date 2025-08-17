@@ -45,7 +45,22 @@ void initialization() {
 
 // Process Function
 void process() {
-    
+    cout << "Enter number of days since cheque issued: ";
+    cin >> days;
+
+    if (days <= 7) {
+        cout << "Do you authorize the transaction? (Y/N): ";
+        cin >> authorize;
+
+        if (authorize == 'Y' || authorize == 'y') {
+            cout << "Transaction Successful! Money transferred to receiver account.\n";
+        } else {
+            cout << "Invalid Transaction. Authorization denied.\n";
+        }
+    } else {
+        cout << "Cheque expired (>7 days). Transaction requires sender review.\n";
+        cout << "Invalid Transaction.\n";
+    }
 }
 // Termination Function
 void termination() {
