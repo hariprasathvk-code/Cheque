@@ -11,7 +11,36 @@ char authorize;
 
 // Initialization Function
 void initialization() {
-    
+    int choice;
+    cout << "Choose Input Method:\n";
+    cout << "1. Insert Bank Card\n";
+    cout << "2. Enter Bank Account Number\n";
+    cout << "Enter choice (1 or 2): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "Bank Card Inserted.\n";
+        bankCard = "Card123"; // Simulated card number
+    } 
+    else if (choice == 2) {
+        cout << "Enter Bank Account Number: ";
+        cin >> bankCard;  // Store account number
+    } 
+    else {
+        cout << "Invalid choice. Transaction aborted.\n";
+        exit(0);  // Stop program
+    }
+
+    cout << "Enter Receiver Bank Account: ";
+    cin >> receiverAcc;
+
+    cout << "Cheque inserted to machine.\n";
+
+    cout << "Enter Transaction Value: ";
+    cin >> value;
+
+    cout << "Enter Sender Bank Account: ";
+    cin >> senderAcc;
 }
 
 // Process Function
